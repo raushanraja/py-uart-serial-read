@@ -24,7 +24,7 @@ options = {
 }
 
 
-def read_serail(args):
+def read_serial(args):
     ser = serial.Serial(args.port, args.baud)
     with open(args.file, 'a') as file:
         while 1:
@@ -41,4 +41,4 @@ if __name__ == '__main__':
         parser.add_argument(name, default=default, type=type, help=help)
     args = parser.parse_args()
 
-    read_serail(args)
+    read_serial(args)
